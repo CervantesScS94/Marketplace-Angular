@@ -1,0 +1,30 @@
+<!--=====================================
+Header Promotion
+======================================-->
+
+<div
+  *ngIf="!preload"
+  class="ps-block--promotion-header bg--cover"
+  style="background: url({{path_url}}img/banner/top/{{top_banner.IMG}})"
+>
+  <div class="container">
+    <div class="ps-block__left">
+      <h3>{{top_banner.H3}}</h3>
+      <figure>
+        <p>{{top_banner.P1}}</p>
+        <h4>{{top_banner.H4}}</h4>
+      </figure>
+    </div>
+    <div class="ps-block__center">
+      <p>{{top_banner.P2}}<span>{{top_banner.SPAN}}</span></p>
+    </div>
+    <a class="ps-btn ps-btn--sm" href="#">{{top_banner.BUTTON}}</a>
+  </div>
+</div>
+
+<div
+  *ngIf="preload"
+  class="d-flex justify-content-center p-4"
+>
+  <div class="spinner-border text-warning"></div>
+</div>
