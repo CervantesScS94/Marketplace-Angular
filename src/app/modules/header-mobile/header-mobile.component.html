@@ -65,62 +65,20 @@
 
           <div class="ps-filter__content">
             <aside class="widget widget_shop">
-              <ul class="ps-list--categories">
-                <li class="current-menu-item menu-item-has-children">
-                  <a href="shop-default.html">Clothing &amp; Apparel</a
+              <ul *ngIf="categories != []" class="ps-list--categories">
+
+                <li *ngFor="let category of categories; let i = index" class="current-menu-item menu-item-has-children">
+                  <a href="shop-default.html">{{category.name}}</a
                   ><span class="sub-toggle"
                     ><i class="fa fa-angle-down"></i
                   ></span>
                   <ul class="sub-menu" style="display: none">
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Womens</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Mens</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Bags</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Sunglasses</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Accessories</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Kid's Fashion</a>
+                    <li *ngFor="let tile of arrayTileList[i]" class="current-menu-item">
+                      <app-subcategories-mobile [title_list]="tile"></app-subcategories-mobile>
                     </li>
                   </ul>
                 </li>
-                <li class="current-menu-item menu-item-has-children">
-                  <a href="shop-default.html">Garden &amp; Kitchen</a
-                  ><span class="sub-toggle active"
-                    ><i class="fa fa-angle-down"></i
-                  ></span>
-                  <ul class="sub-menu" style="display: block">
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Cookware</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Decoration</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Furniture</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Garden Tools</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Home Improvement</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Powers And Hand Tools</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Utensil &amp; Gadget</a>
-                    </li>
-                  </ul>
-                </li>
+
                 <li class="current-menu-item menu-item-has-children">
                   <a href="shop-default.html">Consumer Electrics</a
                   ><span class="sub-toggle"
@@ -240,106 +198,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="current-menu-item menu-item-has-children">
-                  <a href="shop-default.html">Health &amp; Beauty</a
-                  ><span class="sub-toggle"
-                    ><i class="fa fa-angle-down"></i
-                  ></span>
-                  <ul class="sub-menu" style="">
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Equipments</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Hair Care</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Perfumer</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Skin Care</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="current-menu-item menu-item-has-children">
-                  <a href="shop-default.html">Computers &amp; Technologies</a
-                  ><span class="sub-toggle"
-                    ><i class="fa fa-angle-down"></i
-                  ></span>
-                  <ul class="sub-menu" style="">
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Desktop PC</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Laptop</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Smartphones</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="current-menu-item menu-item-has-children">
-                  <a href="shop-default.html">Jewelry &amp; Watches</a
-                  ><span class="sub-toggle"
-                    ><i class="fa fa-angle-down"></i
-                  ></span>
-                  <ul class="sub-menu" style="">
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Gemstone Jewelry</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Men's Watches</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Women's Watches</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="current-menu-item menu-item-has-children">
-                  <a href="shop-default.html">Phones &amp; Accessories</a
-                  ><span class="sub-toggle"
-                    ><i class="fa fa-angle-down"></i
-                  ></span>
-                  <ul class="sub-menu" style="">
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Iphone 8</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Iphone X</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Sam Sung Note 8</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Sam Sung S8</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="current-menu-item menu-item-has-children">
-                  <a href="shop-default.html">Sport &amp; Outdoor</a
-                  ><span class="sub-toggle"
-                    ><i class="fa fa-angle-down"></i
-                  ></span>
-                  <ul class="sub-menu" style="">
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Freezer Burn</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Fridge Cooler</a>
-                    </li>
-                    <li class="current-menu-item">
-                      <a href="shop-default.html">Wine Cabinets</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="current-menu-item">
-                  <a href="shop-default.html">Babies &amp; Moms</a>
-                </li>
-                <li class="current-menu-item">
-                  <a href="shop-default.html">Books &amp; Office</a>
-                </li>
-                <li class="current-menu-item">
-                  <a href="shop-default.html">Cars &amp; Motocycles</a>
-                </li>
+
               </ul>
             </aside>
           </div>

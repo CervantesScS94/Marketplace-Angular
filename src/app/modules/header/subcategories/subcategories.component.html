@@ -1,0 +1,7 @@
+<ul *ngIf="SubCategories != []"  class="mega-menu__list">
+    <li *ngFor="let item of SubCategories">
+        <a href="#">
+            {{item.name}}
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,9 @@
+<a href="shop-default.html">{{title_list}}</a>
+
+<span class="sub-toggle"><i class="fa fa-angle-down"></i></span>
+
+<ul *ngIf="subCategoriesArray" class="sub-menu" style="">
+    <li *ngFor="let item of subCategoriesArray" class="current-menu-item">
+        <a href="shop-default.html">{{item.name}}</a>
+    </li>
+</ul>

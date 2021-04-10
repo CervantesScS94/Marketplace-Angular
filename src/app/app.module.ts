@@ -11,6 +11,8 @@ import { HeaderPromotionComponent } from './modules/header-promotion/header-prom
 import { HeaderMobileComponent } from './modules/header-mobile/header-mobile.component';
 import { NewLetterComponent } from './modules/new-letter/new-letter.component';
 import { NewFooterComponent } from './modules/new-footer/new-footer.component';
+import { SubcategoriesComponent } from './modules/header/subcategories/subcategories.component';
+import { SubcategoriesMobileComponent } from './modules/header-mobile/subcategories-mobile/subcategories-mobile.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NewFooterComponent } from './modules/new-footer/new-footer.component';
     HeaderPromotionComponent,
     HeaderMobileComponent,
     NewLetterComponent,
-    NewFooterComponent
+    NewFooterComponent,
+    SubcategoriesComponent,
+    SubcategoriesMobileComponent
   ],
   imports: [
     BrowserModule,
